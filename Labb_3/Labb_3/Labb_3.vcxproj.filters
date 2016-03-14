@@ -16,15 +16,15 @@
     <ClCompile Include="App.xaml.cpp" />
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="..\..\..\WOMU-Labb3\Labb3_App\Labb3_App\Room.cpp" />
-    <ClCompile Include="..\..\..\WOMU-Labb3\Labb3_App\Labb3_App\Wall.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
     <ClInclude Include="MainPage.xaml.h" />
-    <ClInclude Include="..\..\..\WOMU-Labb3\Labb3_App\Labb3_App\Room.h" />
-    <ClInclude Include="..\..\..\WOMU-Labb3\Labb3_App\Labb3_App\Wall.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
