@@ -3,6 +3,7 @@ class Wall sealed
 {
 	std::string title;
 	std::string detailedDesc;
+	double area;
 public:
 	Wall();
 	virtual ~Wall();
@@ -10,5 +11,7 @@ public:
 	void setTitle(std::string);
 	std::string getDetailedDesc();
 	void setDetailedDesc(std::string);
+	void setArea(double);
+	double getArea();
 };
 

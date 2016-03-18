@@ -7,10 +7,21 @@ class Room sealed
 	std::string title;
 	std::string detailedDesc;
 	std::list<Wall> RoomWalls;
+	double volume;
+
 public:
+
+	Windows::Devices::Geolocation::Geocoordinate^ g;
 	Room();
 	virtual ~Room();
 	std::string getTitle();
 	void setTitle(std::string);
+	void setDetailedDesc(std::string);
+	std::string getDetailedDesc();
+	void setVolume();
+	double getVolume();
+	void setCoordinates();
+	Windows::Devices::Geolocation::Geocoordinate^ getCoordinates();
+
 };
 

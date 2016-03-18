@@ -19,3 +19,27 @@ string Room::getTitle() {
 void Room::setTitle(string name) {
 	title = name;
 }
+
+void Room::setDetailedDesc(string desc) {
+	detailedDesc = desc;
+}
+
+
+void Room::setVolume() {
+	
+}
+
+double Room::getVolume() {
+	return volume;
+}
+
+void Room::setCoordinates() {
+	g = ref new Windows::Devices::Geolocation::Geocoordinate();
+}
+
+Windows::Devices::Geolocation::Geocoordinate^ Room::getCoordinates() {
+	return g;
+}
+
+
+

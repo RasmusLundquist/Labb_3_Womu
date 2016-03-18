@@ -27,3 +27,11 @@ string Wall::getDetailedDesc() {
 void Wall::setDetailedDesc(string desc) {
 	detailedDesc = desc;
 }
+
+void Wall::setArea(double a) {
+	area = a;
+}
+
+double Wall::getArea() {
+	return area;
+}
