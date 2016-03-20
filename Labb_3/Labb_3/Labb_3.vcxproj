@@ -150,7 +150,13 @@
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ExistingRoomPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UpdateRoomPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

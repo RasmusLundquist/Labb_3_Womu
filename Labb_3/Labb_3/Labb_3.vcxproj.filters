@@ -57,5 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
+    <Page Include="UpdateRoomPage.xaml" />
+    <Page Include="ExistingRoomPage.xaml" />
   </ItemGroup>
 </Project>

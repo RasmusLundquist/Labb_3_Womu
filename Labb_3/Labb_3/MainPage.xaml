@@ -11,6 +11,8 @@
         <Grid.RenderTransform>
             <CompositeTransform Rotation="9360.62"/>
         </Grid.RenderTransform>
+        <Button x:Name="button" Content="Start Documenting A New Room" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" Height="306" Width="353" Click="RedirectNewRoom"/>
+        <Button x:Name="button2" Content="Update Existing Room" RenderTransformOrigin="-2.116,-4.017" Height="313" Width="355" Margin="3,324,0,3" Click="RedirectUpdate"/>
 
     </Grid>
 </Page>

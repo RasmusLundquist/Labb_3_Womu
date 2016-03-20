@@ -17,5 +17,8 @@ namespace Labb_3
 	public:
 		MainPage();
 
+	private:
+		void RedirectUpdate(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void RedirectNewRoom(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

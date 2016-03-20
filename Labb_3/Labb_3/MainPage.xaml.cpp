@@ -25,3 +25,15 @@ MainPage::MainPage()
 {
 	InitializeComponent();
 }
+
+
+void Labb_3::MainPage::RedirectUpdate(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(Labb_3::));
+}
+
+
+void Labb_3::MainPage::RedirectNewRoom(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+}
