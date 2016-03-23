@@ -11,7 +11,7 @@ class Room sealed
 
 public:
 
-	Windows::Devices::Geolocation::Geocoordinate^ g;
+	Windows::Devices::Geolocation::Geolocator^ g;
 	Room();
 	virtual ~Room();
 	std::string getTitle();

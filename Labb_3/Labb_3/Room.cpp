@@ -34,11 +34,11 @@ double Room::getVolume() {
 }
 
 void Room::setCoordinates() {
-	g = ref new Windows::Devices::Geolocation::Geocoordinate();
+	g = ref new Windows::Devices::Geolocation::Geolocator();
 }
 
 Windows::Devices::Geolocation::Geocoordinate^ Room::getCoordinates() {
-	return g;
+	return g->GetGeopositionAsync;
 }
 
 

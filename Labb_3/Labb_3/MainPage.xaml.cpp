@@ -29,7 +29,7 @@ MainPage::MainPage()
 
 void Labb_3::MainPage::RedirectUpdate(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(Labb_3::));
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(Labb_3::UpdateRoomPage));
 }
 
 
