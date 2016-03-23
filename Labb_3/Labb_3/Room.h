@@ -6,7 +6,7 @@ class Room sealed
 {
 	std::string title;
 	std::string detailedDesc;
-	std::list<Wall> RoomWalls;
+	std::vector<Wall> RoomWalls;
 	double volume;
 
 public:
@@ -22,6 +22,8 @@ public:
 	double getVolume();
 	void setCoordinates();
 	void getCoordinates();
+	void addWall(Wall wall);
+	Wall getWall(int i);
 
 };
 

@@ -25,3 +25,9 @@ PageUpdateRoom::PageUpdateRoom()
 {
 	InitializeComponent();
 }
+
+
+void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e)
+{
+
+}

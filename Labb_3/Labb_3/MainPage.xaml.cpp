@@ -35,5 +35,5 @@ void Labb_3::MainPage::RedirectUpdate(Platform::Object^ sender, Windows::UI::Xam
 
 void Labb_3::MainPage::RedirectNewRoom(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageExistingRoom::typeid));
 }

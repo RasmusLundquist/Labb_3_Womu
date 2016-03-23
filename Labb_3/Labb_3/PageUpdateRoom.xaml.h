@@ -17,5 +17,7 @@ namespace Labb_3
 	{
 	public:
 		PageUpdateRoom();
+	private:
+		void textBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e);
 	};
 }
