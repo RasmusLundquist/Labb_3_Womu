@@ -6,7 +6,7 @@
 #pragma once
 
 #include "MainPage.g.h"
-#include "UpdateRoomPage.g.h"
+#include "PageUpdateRoom.g.h"
 
 namespace Labb_3
 {

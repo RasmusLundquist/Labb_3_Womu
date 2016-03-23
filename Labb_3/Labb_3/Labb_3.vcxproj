@@ -136,6 +136,12 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="PageExistingRoom.xaml.h">
+      <DependentUpon>PageExistingRoom.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="PageUpdateRoom.xaml.h">
+      <DependentUpon>PageUpdateRoom.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -150,13 +156,13 @@
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ExistingRoomPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UpdateRoomPage.xaml">
+    <Page Include="PageExistingRoom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageUpdateRoom.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -181,6 +187,12 @@
     </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="PageExistingRoom.xaml.cpp">
+      <DependentUpon>PageExistingRoom.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="PageUpdateRoom.xaml.cpp">
+      <DependentUpon>PageUpdateRoom.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

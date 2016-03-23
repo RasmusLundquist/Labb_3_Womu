@@ -21,7 +21,7 @@ public:
 	void setVolume();
 	double getVolume();
 	void setCoordinates();
-	Windows::Devices::Geolocation::Geocoordinate^ getCoordinates();
+	void getCoordinates();
 
 };
 

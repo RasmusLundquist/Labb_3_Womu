@@ -37,8 +37,8 @@ void Room::setCoordinates() {
 	g = ref new Windows::Devices::Geolocation::Geolocator();
 }
 
-Windows::Devices::Geolocation::Geocoordinate^ Room::getCoordinates() {
-	return g->GetGeopositionAsync;
+void Room::getCoordinates() {
+	//Denna funktionen ska returnera kordinater när vi vet hur man gör det
 }
 
 
