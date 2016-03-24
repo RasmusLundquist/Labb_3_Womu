@@ -25,3 +25,9 @@ PageExistingRoom::PageExistingRoom()
 {
 	InitializeComponent();
 }
+
+
+void Labb_3::PageExistingRoom::Redirect_Update(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageUpdateRoom::typeid));
+}

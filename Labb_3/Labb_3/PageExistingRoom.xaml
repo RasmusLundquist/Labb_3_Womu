@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="titleTextBlock" HorizontalAlignment="Left" Margin="57,39,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="descriptionTextBlock" HorizontalAlignment="Left" Margin="52,78,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <ListBox x:Name="wallsListBox" HorizontalAlignment="Left" Height="195" Margin="50,180,0,0" VerticalAlignment="Top" Width="269"/>
+        <TextBlock x:Name="VolumeTextBlock" HorizontalAlignment="Left" Margin="48,120,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Uppdatera Detta Rum" HorizontalAlignment="Left" Margin="88,481,0,0" VerticalAlignment="Top" Height="83" Width="178" Click="Redirect_Update"/>
 
     </Grid>
 </Page>
