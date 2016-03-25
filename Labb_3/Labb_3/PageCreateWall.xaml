@@ -8,15 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="titleTextBlock" HorizontalAlignment="Left" Margin="53,66,0,0" TextWrapping="Wrap" Text="Wall Title:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="areaTextBox" HorizontalAlignment="Left" Margin="50,123,0,0" TextWrapping="Wrap" Text="Wall Area:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="descTextBlock" HorizontalAlignment="Left" Margin="28,168,0,0" TextWrapping="Wrap" Text="Wall Description:" VerticalAlignment="Top"/>
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Margin="156,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
-        <TextBox x:Name="AreaTextBox" HorizontalAlignment="Left" Margin="155,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="descTextBox" HorizontalAlignment="Left" Margin="154,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="145" Width="183"/>
-        <Button x:Name="saveButton" Content="Save Wall" HorizontalAlignment="Left" Margin="39,341,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="addImageButton" Content="Add Image" HorizontalAlignment="Left" Margin="199,340,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="goBackButton" Content="Go Back" HorizontalAlignment="Left" Margin="42,417,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="titleTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Wall Title:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="areaTextBox" HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Wall Area:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="descTextBlock" HorizontalAlignment="Left" Margin="12,134,0,0" TextWrapping="Wrap" Text="Wall Description:" VerticalAlignment="Top"/>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="AreaTextBox" HorizontalAlignment="Left" Margin="12,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="descTextBox" HorizontalAlignment="Left" Margin="12,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="145" Width="183"/>
+        <Button x:Name="saveButton" Content="Save Wall" HorizontalAlignment="Left" Margin="12,346,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addImageButton" Content="Add Image" HorizontalAlignment="Left" Margin="12,309,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

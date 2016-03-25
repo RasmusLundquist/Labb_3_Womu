@@ -38,7 +38,7 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	Room newRoom;
+	
 
 	if (roomNameTextBox->Text == nullptr || detailsRoomTextBox->Text == nullptr) {
 		String^ warning = "Please enter a title and detailed description for your room!";
@@ -61,4 +61,11 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 	}
 
 
+}
+
+
+void Labb_3::PageUpdateRoom::manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid),newRoom);
 }

@@ -33,8 +33,3 @@ void Labb_3::PageExistingRoom::Redirect_Update(Platform::Object^ sender, Windows
 	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageUpdateRoom::typeid));
 }
 
-
-void Labb_3::PageExistingRoom::goBackButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-{
-	
-}
