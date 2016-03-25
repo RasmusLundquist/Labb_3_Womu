@@ -26,6 +26,8 @@ using namespace Windows::UI::Xaml::Navigation;
 /// Initializes the singleton application object.  This is the first line of authored code
 /// executed, and as such is the logical equivalent of main() or WinMain().
 /// </summary>
+
+
 App::App()
 {
 	InitializeComponent();
@@ -34,7 +36,7 @@ App::App()
 }
 
 
-void Labb_3::App::App_BackRequested(Platform::Object ^ sender, Windows::UI::Core::BackRequestedEventArgs ^ e)
+void App::App_BackRequested(Platform::Object ^ sender, Windows::UI::Core::BackRequestedEventArgs ^ e)
 {
 	Frame^ rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
 	if (rootFrame == nullptr)
