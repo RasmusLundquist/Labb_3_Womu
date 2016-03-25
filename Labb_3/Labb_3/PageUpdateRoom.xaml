@@ -8,14 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nytt rum" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Ange titel på rummet:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="New room" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Set titel for the room:" VerticalAlignment="Top"/>
         <TextBox x:Name="roomNameTextBox" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" TextChanged="textBox_TextChanged"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Ange detaljerad beskrivning på rummet:" VerticalAlignment="Top"  Width="276"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Set detailed description for your room:" VerticalAlignment="Top"  Width="276"/>
         <TextBox x:Name="detailsRoomTextBox" HorizontalAlignment="Left" Margin="10,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Height="105"/>
-        <Button x:Name="manualButton" Content="Lägg till vägg manuellt" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="manualButton" Content="Add wall manually" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top"/>
         <Button x:Name="autoButton" Content="Magic-Auto-Wall-Button" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,306,0,0" TextWrapping="Wrap" Text="Väggar i ditt rum:" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="181" Margin="10,367,0,0" VerticalAlignment="Top" Width="276"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,306,0,0" TextWrapping="Wrap" Text="Add walls for your room:" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="112" Margin="10,331,0,0" VerticalAlignment="Top" Width="276"/>
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="235,13,0,0" VerticalAlignment="Top" Click="saveButton_Click" RenderTransformOrigin="-2.432,0.646"/>
+        <TextBlock x:Name="warningTextBlock" HorizontalAlignment="Left" Margin="18,448,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52" Width="268"/>
     </Grid>
 </Page>

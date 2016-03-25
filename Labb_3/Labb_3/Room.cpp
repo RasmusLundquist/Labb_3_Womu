@@ -12,15 +12,15 @@ Room::~Room()
 {
 }
 
-string Room::getTitle() {
+Platform::String^ Room::getTitle() {
 	return title;
 }
 
-void Room::setTitle(string name) {
+void Room::setTitle(Platform::String^ name) {
 	title = name;
 }
 
-void Room::setDetailedDesc(string desc) {
+void Room::setDetailedDesc(Platform::String^ desc) {
 	detailedDesc = desc;
 }
 

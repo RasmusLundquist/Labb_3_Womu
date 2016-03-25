@@ -4,20 +4,21 @@
 
 class Room sealed
 {
-	std::string title;
-	std::string detailedDesc;
+	Platform::String^ title;
+	Platform::String^ detailedDesc;
 	std::vector<Wall> RoomWalls;
 	double volume;
+
 
 public:
 
 	Windows::Devices::Geolocation::Geolocator^ g;
 	Room();
 	virtual ~Room();
-	std::string getTitle();
-	void setTitle(std::string);
-	void setDetailedDesc(std::string);
-	std::string getDetailedDesc();
+	Platform::String^ getTitle();
+	void setTitle(Platform::String^ title);
+	void setDetailedDesc(Platform::String^ desc);
+	Platform::String^ getDetailedDesc();
 	void setVolume();
 	double getVolume();
 	void setCoordinates();

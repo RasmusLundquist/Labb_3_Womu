@@ -21,13 +21,44 @@ using namespace Windows::UI::Xaml::Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
+#include <stdlib.h>
+
 PageUpdateRoom::PageUpdateRoom()
 {
+	
 	InitializeComponent();
 }
 
 
 void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e)
 {
+
+}
+
+
+void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	Room newRoom;
+
+	if (roomNameTextBox->Text == nullptr || detailsRoomTextBox->Text == nullptr) {
+		String^ warning = "Please enter a title and detailed description for your room!";
+		warningTextBlock->Text = warning;
+	}
+
+	else {
+		newRoom.setTitle(roomNameTextBox->Text);
+		newRoom.setDetailedDesc(detailsRoomTextBox->Text);
+		//We are suposed to save the room to the file in the flash memory though
+		//Handle this here
+		//But in the meantime it's "saved" locally
+		roomList.push_back(newRoom);
+		warningTextBlock->Text = "Your room has been saved!";
+
+
+		//Also this should contain function for calculating the area
+		//First we must handle adding the walls to the room though
+		//Since we wanted to calculate the area just once depending on the area for the first added wall
+	}
+
 
 }

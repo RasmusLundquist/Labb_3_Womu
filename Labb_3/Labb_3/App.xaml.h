@@ -6,6 +6,7 @@
 #pragma once
 
 #include "App.g.h"
+#include "Room.h"
 
 namespace Labb_3
 {
@@ -16,6 +17,8 @@ namespace Labb_3
 	{
 	public:
 		void App_BackRequested(Platform::Object^ sender, Windows::UI::Core::BackRequestedEventArgs^ e);
+		
+		
 
 	protected:
 		virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e) override;
@@ -26,5 +29,7 @@ namespace Labb_3
 	private:
 		void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ e);
 		void OnNavigationFailed(Platform::Object ^sender, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs ^e);
+
+		
 	};
 }
