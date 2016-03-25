@@ -14,6 +14,9 @@ namespace Labb_3
 	/// </summary>
 	ref class App sealed
 	{
+	public:
+		void App_BackRequested(Platform::Object^ sender, Windows::UI::Core::BackRequestedEventArgs^ e);
+
 	protected:
 		virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e) override;
 

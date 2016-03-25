@@ -30,6 +30,19 @@ App::App()
 {
 	InitializeComponent();
 	Suspending += ref new SuspendingEventHandler(this, &App::OnSuspending);
+	
+}
+
+
+void Labb_3::App::App_BackRequested(Platform::Object ^ sender, Windows::UI::Core::BackRequestedEventArgs ^ e)
+{
+	Frame^ rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
+	if (rootFrame == nullptr)
+		return;
+	if (rootFrame->CanGoBack && e->Handled == false) {
+		e->Handled = true;
+		rootFrame->GoBack();
+	}
 }
 
 /// <summary>
@@ -50,6 +63,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 #endif
 
 	auto rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
+	Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->BackRequested += ref new Windows::Foundation::EventHandler<Windows::UI::Core::BackRequestedEventArgs^>(this, &App::App_BackRequested);
 
 	// Do not repeat app initialization when the Window already has content,
 	// just ensure that the window is active
@@ -87,7 +101,9 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 			// When the navigation stack isn't restored navigate to the first page,
 			// configuring the new page by passing required information as a navigation
 			// parameter
+
 			rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+
 		}
 		// Ensure the current window is active
 		Window::Current->Activate();

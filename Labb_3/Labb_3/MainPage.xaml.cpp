@@ -29,11 +29,11 @@ MainPage::MainPage()
 
 void Labb_3::MainPage::RedirectUpdate(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageUpdateRoom::typeid));
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageListRooms::typeid));
 }
 
 
 void Labb_3::MainPage::RedirectNewRoom(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageExistingRoom::typeid));
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageUpdateRoom::typeid));
 }

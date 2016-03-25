@@ -139,6 +139,9 @@
     <ClInclude Include="PageExistingRoom.xaml.h">
       <DependentUpon>PageExistingRoom.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="PageListRooms.xaml.h">
+      <DependentUpon>PageListRooms.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="PageUpdateRoom.xaml.h">
       <DependentUpon>PageUpdateRoom.xaml</DependentUpon>
     </ClInclude>
@@ -160,6 +163,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PageExistingRoom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageListRooms.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PageUpdateRoom.xaml">
@@ -190,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="PageExistingRoom.xaml.cpp">
       <DependentUpon>PageExistingRoom.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="PageListRooms.xaml.cpp">
+      <DependentUpon>PageListRooms.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="PageUpdateRoom.xaml.cpp">
       <DependentUpon>PageUpdateRoom.xaml</DependentUpon>
