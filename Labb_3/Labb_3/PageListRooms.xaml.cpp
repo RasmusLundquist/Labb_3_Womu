@@ -1,10 +1,10 @@
 ﻿//
-// PageExistingRoom.xaml.cpp
-// Implementation of the PageExistingRoom class
+// PageListRooms.xaml.cpp
+// Implementation of the PageListRooms class
 //
 
 #include "pch.h"
-#include "PageExistingRoom.xaml.h"
+#include "PageListRooms.xaml.h"
 
 using namespace Labb_3;
 
@@ -21,20 +21,7 @@ using namespace Windows::UI::Xaml::Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-PageExistingRoom::PageExistingRoom()
+PageListRooms::PageListRooms()
 {
 	InitializeComponent();
-	
-}
-
-
-void Labb_3::PageExistingRoom::Redirect_Update(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-{
-	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageUpdateRoom::typeid));
-}
-
-
-void Labb_3::PageExistingRoom::goBackButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-{
-	
 }

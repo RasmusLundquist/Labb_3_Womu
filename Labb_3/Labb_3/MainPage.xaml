@@ -7,12 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.5,0.5">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RenderTransform>
             <CompositeTransform Rotation="9360.62"/>
         </Grid.RenderTransform>
-        <Button x:Name="button" Content="Start Documenting A New Room" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" Height="306" Width="353" Click="RedirectNewRoom"/>
-        <Button x:Name="button2" Content="Show Existing Rooms" RenderTransformOrigin="-2.116,-4.017" Height="313" Width="355" Margin="3,324,0,3" Click="RedirectUpdate"/>
+        <Button x:Name="button" Content="Start Documenting A New Room" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Height="118" Width="340" Click="RedirectNewRoom"/>
+        <Button x:Name="button2" Content="Show Existing Rooms" RenderTransformOrigin="-2.116,-4.017" Height="250" Width="340" Margin="10,317,0,73" Click="RedirectUpdate"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Welcome to the super room designer!" VerticalAlignment="Top" FontSize="26.667"/>
 
     </Grid>
 </Page>

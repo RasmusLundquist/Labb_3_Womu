@@ -7,7 +7,7 @@
 
 #include "MainPage.g.h"
 #include "PageUpdateRoom.g.h"
-#include "PageExistingRoom.g.h"
+#include "PageListRooms.g.h"
 
 namespace Labb_3
 {
