@@ -13,7 +13,7 @@
         <TextBox x:Name="roomNameTextBox" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" TextChanged="textBox_TextChanged"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Set detailed description for your room:" VerticalAlignment="Top"  Width="276"/>
         <TextBox x:Name="detailsRoomTextBox" HorizontalAlignment="Left" Margin="10,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Height="105"/>
-        <Button x:Name="manualButton" Content="Add wall manually" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="manualButton" Content="Add wall manually" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Click="manualButton_Click"/>
         <Button x:Name="autoButton" Content="Magic-Auto-Wall-Button" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,306,0,0" TextWrapping="Wrap" Text="Add walls for your room:" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="112" Margin="10,331,0,0" VerticalAlignment="Top" Width="276"/>

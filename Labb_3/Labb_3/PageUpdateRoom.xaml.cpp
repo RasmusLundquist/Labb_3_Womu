@@ -27,6 +27,7 @@ PageUpdateRoom::PageUpdateRoom()
 {
 	
 	InitializeComponent();
+	this->NavigationCacheMode = Windows::UI::Xaml::Navigation::NavigationCacheMode::Enabled;
 }
 
 
@@ -38,7 +39,7 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	Room newRoom;
+	
 
 	if (roomNameTextBox->Text == nullptr || detailsRoomTextBox->Text == nullptr) {
 		String^ warning = "Please enter a title and detailed description for your room!";
@@ -46,6 +47,7 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 	}
 
 	else {
+		Room newRoom;
 		newRoom.setTitle(roomNameTextBox->Text);
 		newRoom.setDetailedDesc(detailsRoomTextBox->Text);
 		//We are suposed to save the room to the file in the flash memory though
@@ -61,4 +63,10 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 	}
 
 
+}
+
+
+void Labb_3::PageUpdateRoom::manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid));
 }

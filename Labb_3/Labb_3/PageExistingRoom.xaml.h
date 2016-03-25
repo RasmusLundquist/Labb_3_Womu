@@ -20,6 +20,5 @@ namespace Labb_3
 		PageExistingRoom();
 	private:
 		void Redirect_Update(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		void goBackButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }
