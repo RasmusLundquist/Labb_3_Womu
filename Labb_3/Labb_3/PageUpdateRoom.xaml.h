@@ -22,7 +22,7 @@ namespace Labb_3
 	private:
 		void textBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e);
 		void saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		std::list<Room> roomList;
+		std::list<Room^> roomList;
 		void manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		Room currentRoom;
 	};

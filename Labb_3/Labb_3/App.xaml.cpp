@@ -47,6 +47,8 @@ void App::App_BackRequested(Platform::Object ^ sender, Windows::UI::Core::BackRe
 	}
 }
 
+
+
 /// <summary>
 /// Invoked when the application is launched normally by the end user.	Other entry points
 /// will be used such as when the application is launched to open a specific file.

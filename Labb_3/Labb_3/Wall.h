@@ -1,16 +1,16 @@
 #pragma once
-class Wall sealed
+ref class Wall sealed
 {
-	std::string title;
-	std::string detailedDesc;
+	Platform::String^ title;
+	Platform::String^ detailedDesc;
 	double area;
 public:
 	Wall();
 	virtual ~Wall();
-	std::string getTitle();
-	void setTitle(std::string);
-	std::string getDetailedDesc();
-	void setDetailedDesc(std::string);
+	Platform::String^ getTitle();
+	void setTitle(Platform::String^ title);
+	Platform::String^ getDetailedDesc();
+	void setDetailedDesc(Platform::String^ desc);
 	void setArea(double);
 	double getArea();
 };

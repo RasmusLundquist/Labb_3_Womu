@@ -12,19 +12,19 @@ Wall::~Wall()
 {
 }
 
-string Wall::getTitle() {
+Platform::String^ Wall::getTitle() {
 	return title;
 }
 
-void Wall::setTitle(string name) {
+void Wall::setTitle(Platform::String^ name) {
 	title = name;
 }
 
-string Wall::getDetailedDesc() {
+Platform::String^ Wall::getDetailedDesc() {
 	return detailedDesc;
 }
 
-void Wall::setDetailedDesc(string desc) {
+void Wall::setDetailedDesc(Platform::String^ desc) {
 	detailedDesc = desc;
 }
 
