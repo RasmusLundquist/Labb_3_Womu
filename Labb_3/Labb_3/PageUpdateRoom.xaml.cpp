@@ -46,6 +46,7 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 	}
 
 	else {
+		Room newRoom;
 		newRoom.setTitle(roomNameTextBox->Text);
 		newRoom.setDetailedDesc(detailsRoomTextBox->Text);
 		//We are suposed to save the room to the file in the flash memory though
@@ -66,6 +67,5 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 
 void Labb_3::PageUpdateRoom::manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-
-	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid),newRoom);
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid));
 }
