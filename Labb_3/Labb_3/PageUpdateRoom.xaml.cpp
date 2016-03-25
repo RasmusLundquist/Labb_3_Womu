@@ -27,6 +27,7 @@ PageUpdateRoom::PageUpdateRoom()
 {
 	
 	InitializeComponent();
+	this->NavigationCacheMode = Windows::UI::Xaml::Navigation::NavigationCacheMode::Enabled;
 }
 
 
