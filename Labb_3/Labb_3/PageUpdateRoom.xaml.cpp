@@ -36,6 +36,10 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 
 }
 
+void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e)
+{
+	Room^ room = (Room^)e->Parameter;
+}
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {

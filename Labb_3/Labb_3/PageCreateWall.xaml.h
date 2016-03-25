@@ -17,5 +17,7 @@ namespace Labb_3
 	{
 	public:
 		PageCreateWall();
+	protected:
+		virtual void OnNavigatedTo(NavigationEventArgs^ e) override;
 	};
 }

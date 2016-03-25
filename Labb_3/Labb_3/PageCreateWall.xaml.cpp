@@ -26,13 +26,7 @@ PageCreateWall::PageCreateWall()
 	InitializeComponent();
 }
 
- void PageCreateWall::OnNavigatedTo(NavigationEventArgs^ e)
+void PageCreateWall::OnNavigatedTo(NavigationEventArgs^ e)
 {
-	if (dynamic_cast<Platform::String^>(e->Parameter) != nullptr)
-	{
-	}
-	else
-	{
-	}
-	::Windows::UI::Xaml::Controls::Page::OnNavigatedTo(e);
+	Wall^ room = (Wall^)e->Parameter;
 }

@@ -27,6 +27,10 @@ PageExistingRoom::PageExistingRoom()
 	
 }
 
+void PageExistingRoom::OnNavigatedTo(NavigationEventArgs^ e)
+{
+	Room^ room = (Room^)e->Parameter;
+}
 
 void Labb_3::PageExistingRoom::Redirect_Update(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {

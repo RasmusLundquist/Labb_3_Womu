@@ -18,6 +18,8 @@ namespace Labb_3
 	{
 	public:
 		PageExistingRoom();
+	protected:
+		virtual void OnNavigatedTo(NavigationEventArgs^ e) override;
 	private:
 		void Redirect_Update(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
