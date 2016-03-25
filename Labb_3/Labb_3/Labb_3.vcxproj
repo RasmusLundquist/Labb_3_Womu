@@ -136,6 +136,9 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="PageCreateWall.xaml.h">
+      <DependentUpon>PageCreateWall.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="PageExistingRoom.xaml.h">
       <DependentUpon>PageExistingRoom.xaml</DependentUpon>
     </ClInclude>
@@ -160,6 +163,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageCreateWall.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PageExistingRoom.xaml">
@@ -193,6 +199,9 @@
     </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="PageCreateWall.xaml.cpp">
+      <DependentUpon>PageCreateWall.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="PageExistingRoom.xaml.cpp">
       <DependentUpon>PageExistingRoom.xaml</DependentUpon>
