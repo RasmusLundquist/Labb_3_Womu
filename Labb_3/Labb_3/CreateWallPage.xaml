@@ -14,6 +14,7 @@
         <TextBox x:Name="areaTextBox" HorizontalAlignment="Left" Margin="140,113,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="182"/>
         <TextBlock x:Name="descriptionTextBlock" HorizontalAlignment="Left" Margin="30,165,0,0" TextWrapping="Wrap" Text="Wall Description:" VerticalAlignment="Top"/>
         <TextBox x:Name="descriptionTextBox" HorizontalAlignment="Left" Margin="158,161,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="172" Width="178"/>
+        <Button x:Name="saveWallButton" Content="Save" HorizontalAlignment="Left" Margin="83,400,0,0" VerticalAlignment="Top" Height="69" Width="188"/>
 
     </Grid>
 </Page>

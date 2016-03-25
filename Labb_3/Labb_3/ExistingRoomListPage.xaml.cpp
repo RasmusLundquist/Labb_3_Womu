@@ -25,3 +25,9 @@ ExistingRoomListPage::ExistingRoomListPage()
 {
 	InitializeComponent();
 }
+
+
+void Labb_3::ExistingRoomListPage::RedirectRoom(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e)
+{
+	
+}

@@ -6,6 +6,7 @@
 #pragma once
 
 #include "ExistingRoomListPage.g.h"
+#include "Room.h"
 
 namespace Labb_3
 {
@@ -17,5 +18,7 @@ namespace Labb_3
 	{
 	public:
 		ExistingRoomListPage();
+	private:
+		void RedirectRoom(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e);
 	};
 }
