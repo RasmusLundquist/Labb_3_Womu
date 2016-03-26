@@ -47,14 +47,17 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 	}
 
 	else {
-		Room^ newRoom;
+		if (currentRoom == nullptr) {
+			currentRoom = ref new Room();
+		}
 		
-		newRoom->setTitle(roomNameTextBox->Text);
-		newRoom->setDetailedDesc(detailsRoomTextBox->Text);
+		
+		currentRoom->setTitle(roomNameTextBox->Text);
+		currentRoom->setDetailedDesc(detailsRoomTextBox->Text);
 		//We are suposed to save the room to the file in the flash memory though
 		//Handle this here
 		//But in the meantime it's "saved" locally
-		roomList.push_back(newRoom);
+		roomList.push_back(currentRoom);
 		warningTextBlock->Text = "Your room has been saved!";
 
 
@@ -69,9 +72,12 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 
 void Labb_3::PageUpdateRoom::manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	Room^ newRoom;
-	newRoom->setTitle(roomNameTextBox->Text);
-	newRoom->setDetailedDesc(detailsRoomTextBox->Text);
+	if (currentRoom == nullptr) {
+		currentRoom = ref new Room();
+	}
 
-	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid),newRoom);
+	currentRoom->setTitle(roomNameTextBox->Text);
+	currentRoom->setDetailedDesc(detailsRoomTextBox->Text);
+
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid),currentRoom);
 }

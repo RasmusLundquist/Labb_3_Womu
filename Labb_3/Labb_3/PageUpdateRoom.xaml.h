@@ -24,6 +24,6 @@ namespace Labb_3
 		void saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		std::list<Room^> roomList;
 		void manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		Room currentRoom;
+		Room^ currentRoom;
 	};
 }

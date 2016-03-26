@@ -28,5 +28,11 @@ PageCreateWall::PageCreateWall()
 
 void PageCreateWall::OnNavigatedTo(NavigationEventArgs^ e)
 {
-	Room^ room = (Room^)e->Parameter;
+	requestedRoom = (Room^)e->Parameter;
+}
+
+
+void Labb_3::PageCreateWall::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
 }
