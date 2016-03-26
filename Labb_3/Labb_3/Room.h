@@ -18,7 +18,7 @@ public:
 	void setTitle(Platform::String^ title);
 	void setDetailedDesc(Platform::String^ desc);
 	Platform::String^ getDetailedDesc();
-	void setVolume();
+	void setVolume(double area);
 	double getVolume();
 	void setCoordinates();
 	void getCoordinates();

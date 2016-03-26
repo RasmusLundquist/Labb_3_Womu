@@ -25,8 +25,8 @@ void Room::setDetailedDesc(Platform::String^ desc) {
 }
 
 
-void Room::setVolume() {
-	
+void Room::setVolume(double area) {
+	volume = pow(area, 3);
 }
 
 double Room::getVolume() {
