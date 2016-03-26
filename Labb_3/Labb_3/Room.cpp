@@ -34,23 +34,22 @@ double Room::getVolume() {
 }
 
 void Room::setCoordinates() {
-	return;
+	
 }
 
 void Room::getCoordinates() {
 	//Denna funktionen ska returnera kordinater när vi vet hur man gör det
 }
 
-//void Room::addWall(Wall^ wall) {
-//	//Kontrollera här hur många väggar det är i rummet eller i "appen?"
-//	RoomWalls.insert(RoomWalls.end(), wall);
-//}
-//
-//Wall^ Room::getWall(int id) {
-//	Wall^ some = ref new Wall();
-//	some = RoomWalls.at(id);
-//	return some;
-//}
+void Room::addWall(Wall^ wall) {
+	//Kontrollera här hur många väggar det är i rummet eller i "appen?"
+	RoomWalls.insert(RoomWalls.end(), wall);
+}
+
+Wall^ Room::getWall(int id) {
+	Wall^ some = RoomWalls.at(id);
+	return some;
+}
 
 
 

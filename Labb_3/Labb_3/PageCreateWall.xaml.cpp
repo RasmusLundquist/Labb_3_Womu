@@ -28,5 +28,5 @@ PageCreateWall::PageCreateWall()
 
 void PageCreateWall::OnNavigatedTo(NavigationEventArgs^ e)
 {
-	Wall^ room = (Wall^)e->Parameter;
+	Room^ room = (Room^)e->Parameter;
 }

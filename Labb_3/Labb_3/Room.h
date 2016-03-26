@@ -6,7 +6,7 @@ ref class Room sealed
 {
 	Platform::String^ title;
 	Platform::String^ detailedDesc;
-	/*std::vector<Wall^> RoomWalls;*/
+	std::vector<Wall^> RoomWalls;
 	double volume;
 
 
@@ -21,9 +21,9 @@ public:
 	void setVolume();
 	double getVolume();
 	void setCoordinates();
-	void getCoordinates();/*
+	void getCoordinates();
 	void addWall(Wall^ wall);
-	Wall^ getWall(int i);*/
+	Wall^ getWall(int i);
 
 };
 

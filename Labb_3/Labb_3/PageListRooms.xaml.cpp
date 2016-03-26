@@ -30,5 +30,5 @@ PageListRooms::PageListRooms()
 void Labb_3::PageListRooms::choseRoomListBox_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e)
 {
 	Object^ a = choseRoomListBox->SelectedItem;
-	Room a = new Room();
+	Room b;
 }

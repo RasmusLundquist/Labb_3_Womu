@@ -18,6 +18,6 @@ namespace Labb_3
 	public:
 		PageCreateWall();
 	protected:
-		virtual void OnNavigatedTo(NavigationEventArgs^ e) override;
+		virtual void OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs^ e) override;
 	};
 }
