@@ -18,6 +18,9 @@ using namespace Windows::UI::Xaml::Data;
 using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+using namespace Windows::Media::Capture;
+using namespace Windows::Storage;
+using namespace Windows::UI::Xaml::Media::Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -62,4 +65,30 @@ void Labb_3::PageCreateWall::saveButton_Click(Platform::Object^ sender, Windows:
 		warningTextBlock->Text = "The wall has been added to your room";
 		//Här borde man då kanske bli redirected till den föregående vyn? det verkar som att det fungerar
 	}
+}
+
+
+void Labb_3::PageCreateWall::addImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	CameraCaptureUI^ dialog = ref new CameraCaptureUI();
+
+	dialog->PhotoSettings->CroppedAspectRatio = Size(16, 9);
+
+	concurrency::task<StorageFile^>(dialog->CaptureFileAsync(CameraCaptureUIMode::Photo)).then([this](StorageFile^ file)
+	{
+		if (nullptr != file)
+		{
+			concurrency::task<Streams::IRandomAccessStream^>(file->OpenAsync(FileAccessMode::Read)).then([this](Streams::IRandomAccessStream^ stream)
+			{
+				BitmapImage^ bitmapImage = ref new BitmapImage();
+				bitmapImage->SetSource(stream);
+			});
+
+			// Store the path in Application Data
+		}
+		else
+		{
+		}
+	});
+
 }
