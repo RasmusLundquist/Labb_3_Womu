@@ -18,6 +18,9 @@ using namespace Windows::UI::Xaml::Data;
 using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+using namespace Windows::Storage;
+using namespace Concurrency;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,10 +39,14 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 
 }
 
+void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e) {
+	this->currentRoom = (Room^)e->Parameter;
+}
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	
+	StorageFolder^ localFile = ApplicationData::Current->LocalFolder;
+	String^ fileName = currentRoom->getTitle();
 
 	if (roomNameTextBox->Text == nullptr || detailsRoomTextBox->Text == nullptr) {
 		String^ warning = "Please enter a title and detailed description for your room!";
@@ -57,6 +64,25 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 		//We are suposed to save the room to the file in the flash memory though
 		//Handle this here
 		//But in the meantime it's "saved" locally
+
+		task<StorageFile^>(localFile->CreateFileAsync(fileName, CreationCollisionOption::ReplaceExisting)).then([this](StorageFile^ newFile) {
+			String^ fileInformation;
+			
+			fileInformation += currentRoom->getTitle()+ "\n";
+			fileInformation += currentRoom->getDetailedDesc() + "\n";
+			//fileInformation += currentRoom->getCoordinates().ToString + "\n";;
+			fileInformation += currentRoom->getVolume().ToString + "\n";
+
+			for each (Wall^ wall in currentRoom->getWall)
+			{
+				fileInformation += wall->getTitle() + "\n";
+				fileInformation += wall->getDetailedDesc() + "\n";
+				fileInformation += wall->getArea() + "\n";
+			}
+
+			create_task(FileIO::WriteTextAsync(newFile, fileInformation));
+		});
+
 		roomList.push_back(currentRoom);
 		warningTextBlock->Text = "Your room has been saved!";
 

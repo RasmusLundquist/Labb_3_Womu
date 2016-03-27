@@ -19,6 +19,8 @@ namespace Labb_3
 	{
 	public:
 		PageUpdateRoom();
+	protected:
+		virtual void OnNavigatedTo(NavigationEventArgs^ e) override;
 	private:
 		void textBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e);
 		void saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
