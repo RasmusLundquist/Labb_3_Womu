@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "PageUpdateRoom.xaml.h"
+#include <string>
 
 using namespace Labb_3;
 
@@ -71,13 +72,26 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 			fileInformation += currentRoom->getTitle()+ "\n";
 			fileInformation += currentRoom->getDetailedDesc() + "\n";
 			//fileInformation += currentRoom->getCoordinates().ToString + "\n";;
-			fileInformation += currentRoom->getVolume().ToString + "\n";
+			
+			//Convert the double for the volume into a std::string
+			std::string str = std::to_string(currentRoom->getVolume()).c_str();
+			
+			//Conver the std::string into a Platform::String^
+			std::wstring wid_str = std::wstring(str.begin(), str.end());
+			const wchar_t* w_char = wid_str.c_str();
+			Platform::String^ p_string = ref new Platform::String(w_char);
 
-			for each (Wall^ wall in currentRoom->getWall)
-			{
-				fileInformation += wall->getTitle() + "\n";
-				fileInformation += wall->getDetailedDesc() + "\n";
-				fileInformation += wall->getArea() + "\n";
+
+			fileInformation += p_string + "\n";
+
+			int i = 0;
+
+			while (!currentRoom->isEmpty()) {
+				Wall^ loopWall = currentRoom->getWall(i);
+				fileInformation += loopWall->getTitle() + "\n";
+				fileInformation += loopWall->getDetailedDesc() + "\n";
+				fileInformation += loopWall->getArea() + "\n";
+				i++;
 			}
 
 			create_task(FileIO::WriteTextAsync(newFile, fileInformation));

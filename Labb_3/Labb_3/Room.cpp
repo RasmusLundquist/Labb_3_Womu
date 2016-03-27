@@ -23,6 +23,9 @@ void Room::setTitle(Platform::String^ name) {
 void Room::setDetailedDesc(Platform::String^ desc) {
 	detailedDesc = desc;
 }
+Platform::String^ Room::getDetailedDesc() {
+	return detailedDesc;
+}
 
 
 void Room::setVolume(double area) {
@@ -31,6 +34,9 @@ void Room::setVolume(double area) {
 
 double Room::getVolume() {
 	return volume;
+}
+bool Room::isEmpty() {
+	return(RoomWalls.size() == 0);
 }
 
 void Room::setCoordinates() {

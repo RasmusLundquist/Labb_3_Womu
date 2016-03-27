@@ -18,7 +18,7 @@ namespace Labb_3
 	public:
 		PageListRooms();
 	private:
-		Platform::Collections::Vector<String^>^ storageName;
+		Platform::Collections::Vector<Platform::String^>^ storageName;
 		void setRooms();
 		void choseRoomListBox_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e);
 	};
