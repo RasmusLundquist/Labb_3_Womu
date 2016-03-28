@@ -8,6 +8,8 @@ ref class Room sealed
 	Platform::String^ detailedDesc;
 	std::vector<Wall^> RoomWalls;
 	double volume;
+	double latitude;
+	double longitude;
 
 
 public:
@@ -22,6 +24,10 @@ public:
 	double getVolume();
 	void setCoordinates();
 	void getCoordinates();
+	double getLatitude();
+	double getLongitude();
+	void setLatitude(double lat);
+	void setLongitude(double lon);
 	void addWall(Wall^ wall);
 	Wall^ getWall(int i);
 	bool isEmpty();
