@@ -61,3 +61,18 @@ Wall^ Room::getWall(int id) {
 
 
 
+double Room::getLatitude() {
+	return latitude;
+}
+
+double Room::getLongitude() {
+	return longitude;
+}
+
+void Room::setLatitude(double lat) {
+	latitude = lat;
+}
+
+void Room::setLongitude(double lon) {
+	longitude = lon;
+}

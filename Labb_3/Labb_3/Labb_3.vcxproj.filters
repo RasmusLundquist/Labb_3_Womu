@@ -22,6 +22,7 @@
     <ClCompile Include="PageUpdateRoom.xaml.cpp" />
     <ClCompile Include="PageListRooms.xaml.cpp" />
     <ClCompile Include="PageCreateWall.xaml.cpp" />
+    <ClCompile Include="LocationHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -33,6 +34,7 @@
     <ClInclude Include="PageUpdateRoom.xaml.h" />
     <ClInclude Include="PageListRooms.xaml.h" />
     <ClInclude Include="PageCreateWall.xaml.h" />
+    <ClInclude Include="LocationHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">

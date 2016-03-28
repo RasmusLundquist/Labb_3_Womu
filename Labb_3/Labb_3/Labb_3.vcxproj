@@ -138,6 +138,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="LocationHandler.h" />
     <ClInclude Include="PageCreateWall.xaml.h">
       <DependentUpon>PageCreateWall.xaml</DependentUpon>
     </ClInclude>
@@ -199,6 +200,7 @@
     <ClCompile Include="App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="LocationHandler.cpp" />
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>
