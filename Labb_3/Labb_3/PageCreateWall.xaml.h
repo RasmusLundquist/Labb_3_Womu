@@ -16,13 +16,19 @@ namespace Labb_3
 	public ref class PageCreateWall sealed
 	{
 		Room^ requestedRoom;
+		
 
 	public:
 		PageCreateWall();
+		void setWallImage(Windows::UI::Xaml::Controls::Image^ img);
+		Windows::UI::Xaml::Controls::Image^ getWallImage();
+		
 	protected:
 		virtual void OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs^ e) override;
 	private:
 		void saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void addImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		Windows::UI::Xaml::Controls::Image^ wallPicture;
+		
 	};
 }

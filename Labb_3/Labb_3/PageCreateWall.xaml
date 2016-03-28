@@ -13,10 +13,11 @@
         <TextBlock x:Name="descTextBlock" HorizontalAlignment="Left" Margin="12,134,0,0" TextWrapping="Wrap" Text="Wall Description:" VerticalAlignment="Top"/>
         <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
         <TextBox x:Name="areaTextBox" HorizontalAlignment="Left" Margin="12,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="descTextBox" HorizontalAlignment="Left" Margin="12,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="145" Width="183"/>
-        <Button x:Name="saveButton" Content="Save Wall" HorizontalAlignment="Left" Margin="12,346,0,0" VerticalAlignment="Top" Click="saveButton_Click"/>
-        <Button x:Name="addImageButton" Content="Add Image" HorizontalAlignment="Left" Margin="12,309,0,0" VerticalAlignment="Top" Click="addImageButton_Click"/>
-        <TextBlock x:Name="warningTextBlock" HorizontalAlignment="Left" Margin="12,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="descTextBox" HorizontalAlignment="Left" Margin="12,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="101" Width="183"/>
+        <Button x:Name="saveButton" Content="Save Wall" HorizontalAlignment="Left" Margin="112,265,0,0" VerticalAlignment="Top" Click="saveButton_Click"/>
+        <Button x:Name="addImageButton" Content="Add Image" HorizontalAlignment="Left" Margin="12,265,0,0" VerticalAlignment="Top" Click="addImageButton_Click"/>
+        <Button x:Name="cameraFrame" MaxWidth="200" MaxHeight="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="12,327,165,0" Height="191" Width="183"/>
+        <TextBlock x:Name="warningTextBlock" HorizontalAlignment="Left" Margin="12,302,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.475,-4.7"/>
 
     </Grid>
 </Page>

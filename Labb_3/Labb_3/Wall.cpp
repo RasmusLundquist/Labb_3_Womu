@@ -35,3 +35,12 @@ void Wall::setArea(double a) {
 double Wall::getArea() {
 	return area;
 }
+void Wall::setWallImage(Windows::UI::Xaml::Controls::Image ^ wallImage)
+{
+	img = wallImage;
+}
+
+Windows::UI::Xaml::Controls::Image ^ Wall::getWallImage()
+{
+	return img;
+}

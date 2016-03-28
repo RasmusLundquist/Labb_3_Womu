@@ -25,6 +25,5 @@ public:
 	void addWall(Wall^ wall);
 	Wall^ getWall(int i);
 	bool isEmpty();
-
 };
 

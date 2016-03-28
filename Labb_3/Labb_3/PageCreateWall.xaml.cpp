@@ -56,10 +56,13 @@ void Labb_3::PageCreateWall::saveButton_Click(Platform::Object^ sender, Windows:
 
 		newWall->setDetailedDesc(descTextBox->Text);
 		newWall->setTitle(titleTextBox->Text);
+		//7Göra typ en if sats här för att kolla om det finns en bild men just nu fakkar vs med mig
+		newWall->setWallImage(wallPicture);
 
 		requestedRoom->addWall(newWall);
 		if (requestedRoom->getVolume() == NULL)
 			requestedRoom->setVolume(hej);
+		
 
 		//bra o kolla om förändringen går igenom dvs så att rummet finns när man går tillbaka i vyn.
 		warningTextBlock->Text = "The wall has been added to your room";
@@ -67,12 +70,19 @@ void Labb_3::PageCreateWall::saveButton_Click(Platform::Object^ sender, Windows:
 	}
 }
 
+///Use this function to set a image stored locally
+void Labb_3::PageCreateWall::setWallImage(Image^ img) {
+	wallPicture = img;
+}
+
+///Use this function whenever we are going to add image to the created wall before we add it to the room
+Windows::UI::Xaml::Controls::Image^ Labb_3::PageCreateWall::getWallImage() {
+	return wallPicture;
+}
 
 void Labb_3::PageCreateWall::addImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	CameraCaptureUI^ dialog = ref new CameraCaptureUI();
-
-	dialog->PhotoSettings->CroppedAspectRatio = Size(16, 9);
 
 	concurrency::task<StorageFile^>(dialog->CaptureFileAsync(CameraCaptureUIMode::Photo)).then([this](StorageFile^ file)
 	{
@@ -82,12 +92,20 @@ void Labb_3::PageCreateWall::addImageButton_Click(Platform::Object^ sender, Wind
 			{
 				BitmapImage^ bitmapImage = ref new BitmapImage();
 				bitmapImage->SetSource(stream);
+				Image^ something = ref new Image();
+				
+				something->Source = bitmapImage;
+				//Spara bilden i klassen så att vi kommer åt den när vi ska spara väggen
+				PageCreateWall::setWallImage(something);
+				//Visa bilden i framen på sidan
+				cameraFrame->Content = something;
 			});
 
-			// Store the path in Application Data
+			
 		}
 		else
 		{
+			return;
 		}
 	});
 

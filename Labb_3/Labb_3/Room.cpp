@@ -39,6 +39,8 @@ bool Room::isEmpty() {
 	return(RoomWalls.size() == 0);
 }
 
+
+
 void Room::setCoordinates() {
 	
 }
