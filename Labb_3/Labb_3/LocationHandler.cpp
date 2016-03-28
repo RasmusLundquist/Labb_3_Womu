@@ -69,6 +69,20 @@ Windows::Devices::Geolocation::Geofencing::Geofence^ LocationHandler::createRoom
 	return nullptr;
 }
 
+void LocationHandler::addLocation(Room^ room) {
+	String^ title = room->getTitle();
+	unsigned int index = 0;
+	Windows::Foundation::Collections::IVector<Windows::Devices::Geolocation::Geofencing::Geofence^>^ vector = locations;
+	Platform::Collections::Vector<Platform::String^>^ locationIDs = ref new Platform::Collections::Vector<Platform::String^>();
+	Geofence^ geof = createRoomLocation(room);
+
+	for each (auto loc in vector) locationIDs->Append(loc->Id);
+
+	if (locationIDs->IndexOf(title, &index)) locations->RemoveAt(index);
+	
+	locations->InsertAt(0, geof);
+}
+
 String^ LocationHandler::stringConvertion(string string) {
 	wstring string2 = wstring(string.begin(), string.end());
 	

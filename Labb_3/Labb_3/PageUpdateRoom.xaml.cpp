@@ -6,6 +6,7 @@
 #include "pch.h"
 #include "PageUpdateRoom.xaml.h"
 #include <string>
+#include "LocationHandler.h"
 
 using namespace Labb_3;
 
@@ -71,7 +72,8 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 			
 			fileInformation += currentRoom->getTitle()+ "\n";
 			fileInformation += currentRoom->getDetailedDesc() + "\n";
-			//fileInformation += currentRoom->getCoordinates().ToString + "\n";;
+			//fileInformation += currentRoom->getLatitude().ToString + "\n";
+			//fileInformation += currentRoom->getLongitude().ToString + "\n";
 			
 			//Convert the double for the volume into a std::string
 			std::string str = std::to_string(currentRoom->getVolume()).c_str();
@@ -94,7 +96,11 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 				i++;
 			}
 
-			create_task(FileIO::WriteTextAsync(newFile, fileInformation));
+			create_task(FileIO::WriteTextAsync(newFile, fileInformation)).then([this](task<void> task) {
+				LocationHandler^ lHandle = ref new LocationHandler();
+
+				lHandle->addLocation(currentRoom);
+			});
 		});
 
 		roomList.push_back(currentRoom);
