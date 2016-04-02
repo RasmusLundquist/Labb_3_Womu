@@ -227,6 +227,11 @@
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundTask\BackgroundTask.vcxproj">
+      <Project>{7a52603c-d547-4409-a187-2f8b697c50c5}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
