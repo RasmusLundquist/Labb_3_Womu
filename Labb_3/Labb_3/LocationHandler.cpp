@@ -10,6 +10,7 @@ using namespace std;
 
 LocationHandler::LocationHandler()
 {
+	//Här crashar den
 	locations = GeofenceMonitor::Current->Geofences;
 }
 
@@ -25,7 +26,7 @@ Windows::Devices::Geolocation::Geofencing::Geofence^ LocationHandler::createLoca
 	pos.Longitude = atof(container[3].c_str());
 	pos.Altitude = 0.0;
 	double test = atof(container[26].c_str());
-	double radius;
+	double radius = 0;
 	String^ key = stringConvertion(container[0]);
 	MonitoredGeofenceStates states = static_cast<MonitoredGeofenceStates>(0);
 	Geocircle^ geoCircle = ref new Geocircle(pos, radius);
@@ -50,14 +51,14 @@ Windows::Devices::Geolocation::Geofencing::Geofence^ LocationHandler::createRoom
 		pos.Latitude = room->getLatitude();
 		pos.Longitude = room->getLongitude();
 		pos.Altitude = 0;
-		double radius;
+		double radius = 0;
 		String^ key = room->getTitle();
 		MonitoredGeofenceStates states = static_cast<MonitoredGeofenceStates>(0);
 		Geocircle^ geoCircle = ref new Geocircle(pos, radius);
 		TimeSpan tSpan;
 		tSpan.Duration = 1500000;
 
-		if (room->getWall(0) == nullptr || room->getWall(0)->getArea == 0) radius = 100;
+		if (room->getWall(0) == nullptr || room->getWall(0)->getArea() == 0) radius = 100;
 		else radius = (sqrt(room->getWall(0)->getArea()) / 1.5);
 
 		states = states | MonitoredGeofenceStates::Entered;

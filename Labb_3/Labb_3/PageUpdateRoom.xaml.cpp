@@ -42,13 +42,12 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 }
 
 void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e) {
-	this->currentRoom = (Room^)e->Parameter;
 }
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	StorageFolder^ localFile = ApplicationData::Current->LocalFolder;
-	String^ fileName = currentRoom->getTitle();
+	String^ fileName = roomNameTextBox->Text;
 
 	if (roomNameTextBox->Text == nullptr || detailsRoomTextBox->Text == nullptr) {
 		String^ warning = "Please enter a title and detailed description for your room!";
