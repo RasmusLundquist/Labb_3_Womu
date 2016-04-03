@@ -136,8 +136,54 @@ void Labb_3::MagicOptionPage::manageCamera() {
 		this->areaTextBox->Text = "10";
 		return;
 	}
+	else{
+		this->titleTextBox->Text = "Back or front wall";
+		this->descTextBox->Text = "Suggested text: This is my beautiful back or front wall!";
+		this->areaTextBox->Text = "10";
+		return;
+	}
 	//Det är svårt att testa vilka riktningar som värdena har när man inte kan rotera telefonen i emulatorn hur man vill
 
 
 		//This is 
+}
+
+void Labb_3::MagicOptionPage::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	Wall^ newWall = ref new Wall();
+
+	if (areaTextBlock->Text == nullptr || titleTextBox->Text == nullptr || descTextBox->Text == nullptr)
+		warningTextBlock->Text = "Please enter Text, Title and Description for your wall!";
+	else {
+
+
+		Platform::String^ platform_string = areaTextBox->Text;
+		const wchar_t* wide_chars = platform_string->Data();
+		char chars[512];
+		wcstombs(chars, wide_chars, 512);
+
+		double hej = atof(chars);
+
+		newWall->setArea(hej);
+
+		newWall->setDetailedDesc(descTextBox->Text);
+		newWall->setTitle(titleTextBox->Text);
+
+		newWall->setWallImage(wallPicture);
+
+		requestedRoom->addWall(newWall);
+		if (requestedRoom->getVolume() == NULL)
+			requestedRoom->setVolume(hej);
+
+
+		//bra o kolla om förändringen går igenom dvs så att rummet finns när man går tillbaka i vyn.
+		warningTextBlock->Text = "The wall has been added to your room";
+		//Här borde man då kanske bli redirected till den föregående vyn? det verkar som att det fungerar
+
+
+		this->titleTextBox->Text = "";
+		this->descTextBox->Text = "";
+		this->areaTextBox->Text = "";
+		this->cameraFrame->Content = nullptr;
+	}
 }

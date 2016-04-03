@@ -31,5 +31,6 @@ namespace Labb_3
 	private:
 		Windows::UI::Xaml::Controls::Image^ wallPicture;
 		void addImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

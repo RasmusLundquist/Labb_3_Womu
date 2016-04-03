@@ -67,6 +67,13 @@ void Labb_3::PageCreateWall::saveButton_Click(Platform::Object^ sender, Windows:
 		//bra o kolla om förändringen går igenom dvs så att rummet finns när man går tillbaka i vyn.
 		warningTextBlock->Text = "The wall has been added to your room";
 		//Här borde man då kanske bli redirected till den föregående vyn? det verkar som att det fungerar
+
+
+
+		this->titleTextBox->Text = "";
+		this->descTextBox->Text = "";
+		this->areaTextBox->Text = "";
+		this->cameraFrame->Content = nullptr;
 	}
 }
 
