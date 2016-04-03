@@ -61,9 +61,9 @@ Wall^ Room::getWall(int id) {
 }
 
 
-Vector<Wall^>^ Room::getWalls() {
-	return RoomWalls;
-}
+//Vector<Wall^>^ Room::getWalls() {
+//	return RoomWalls;
+//}
 
 
 double Room::getLatitude() {
