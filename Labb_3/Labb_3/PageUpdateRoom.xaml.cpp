@@ -33,6 +33,8 @@ PageUpdateRoom::PageUpdateRoom()
 	
 	InitializeComponent();
 	this->NavigationCacheMode = Windows::UI::Xaml::Navigation::NavigationCacheMode::Enabled;
+
+	
 }
 
 
@@ -42,6 +44,9 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 }
 
 void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e) {
+	if (currentRoom != nullptr || !currentRoom->isEmpty()) {
+
+	}
 }
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
@@ -94,22 +99,23 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 				fileInformation += loopWall->getArea() + "\n";
 				i++;
 			}
-			FileIO::WriteTextAsync(newFile, fileInformation);
 
-			/*create_task(FileIO::WriteTextAsync(newFile, fileInformation));.then([this](task<void> task) {
-				LocationHandler^ lHandle = ref new LocationHandler();
+			create_task(FileIO::WriteTextAsync(newFile, fileInformation)).then([this](task<void> task) {
+				/*LocationHandler^ lHandle = ref new LocationHandler();
 
-				lHandle->addLocation(currentRoom);
-			});*/
+				lHandle->addLocation(currentRoom);*/
+			});
 		});
 
 		roomList.push_back(currentRoom);
 		warningTextBlock->Text = "Your room has been saved!";
 
+		roomNameTextBox->Text = "";
+		detailsRoomTextBox->Text = "";
 
-		//Also this should contain function for calculating the area
-		//First we must handle adding the walls to the room though
-		//Since we wanted to calculate the area just once depending on the area for the first added wall
+		currentRoom = nullptr;
+
+		//Also clear the wall list
 	}
 
 
