@@ -52,6 +52,9 @@ void Room::getCoordinates() {
 
 void Room::addWall(Wall^ wall) {
 	//Kontrollera här hur många väggar det är i rummet eller i "appen?"
+	if (RoomWalls == nullptr) {
+		RoomWalls = ref new Platform::Collections::Vector<Wall^>();
+	}
 	RoomWalls->InsertAt(RoomWalls->Size, wall);
 }
 
@@ -61,7 +64,7 @@ Wall^ Room::getWall(int id) {
 }
 
 
-Vector<Wall^>^ Room::getWalls() {
+Windows::Foundation::Collections::IVector<Wall^>^ Room::getWalls() {
 	return RoomWalls;
 }
 

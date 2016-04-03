@@ -31,6 +31,6 @@ public:
 	void addWall(Wall^ wall);
 	Wall^ getWall(int i);
 	bool isEmpty();
-	Platform::Collections::Vector<Wall^>^ getWalls();
+	Windows::Foundation::Collections::IVector<Wall^>^ getWalls();
 };
 
