@@ -16,7 +16,19 @@
         <Button x:Name="manualButton" Content="Add wall manually" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Click="manualButton_Click"/>
         <Button x:Name="autoButton" Content="Magic-Auto-Wall-Button" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Click="autoButton_Click"/>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,306,0,0" TextWrapping="Wrap" Text="Add walls for your room:" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="112" Margin="10,331,0,0" VerticalAlignment="Top" Width="276"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="112" Margin="10,331,0,0" VerticalAlignment="Top" Width="276">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock>
+                            <Run> Wall: </Run>
+                            <Run Text="{Binding}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="235,13,0,0" VerticalAlignment="Top" Click="saveButton_Click" RenderTransformOrigin="-2.432,0.646"/>
         <TextBlock x:Name="warningTextBlock" HorizontalAlignment="Left" Margin="18,448,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="52" Width="268"/>
     </Grid>

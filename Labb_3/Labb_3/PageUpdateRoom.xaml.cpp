@@ -34,8 +34,7 @@ PageUpdateRoom::PageUpdateRoom()
 	
 	InitializeComponent();
 	this->NavigationCacheMode = Windows::UI::Xaml::Navigation::NavigationCacheMode::Enabled;
-
-	
+	listBox->ItemsSource = currentRoom->getWalls(currentRoom);
 }
 
 
@@ -45,11 +44,11 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 }
 
 void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e) {
-	if (currentRoom != nullptr) {
-		if (!currentRoom->isEmpty()) {
-
-		}
+	if (currentRoom != nullptr || !currentRoom->isEmpty()) {
+		currentRoom = (Room^)e->Parameter;
 	}
+	else currentRoom = ref new Room();
+}
 }
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
