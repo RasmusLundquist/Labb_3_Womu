@@ -27,5 +27,6 @@ namespace Labb_3
 		std::list<Room^> roomList;
 		void manualButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		Room^ currentRoom;
+		void autoButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }
