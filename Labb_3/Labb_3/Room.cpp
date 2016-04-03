@@ -76,3 +76,7 @@ void Room::setLatitude(double lat) {
 void Room::setLongitude(double lon) {
 	longitude = lon;
 }
+
+bool Room::isEmpty() {
+	return RoomWalls.empty();
+}

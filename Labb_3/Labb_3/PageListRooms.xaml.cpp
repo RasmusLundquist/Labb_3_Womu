@@ -26,6 +26,8 @@ using namespace Concurrency;
 PageListRooms::PageListRooms()
 {
 	InitializeComponent();
+	setRooms();
+	choseRoomListBox->ItemsSource = storageName;
 }
 
 void PageListRooms::setRooms(){

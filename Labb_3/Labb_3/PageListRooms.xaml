@@ -13,7 +13,10 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="hej!"/>
+                        <TextBlock>
+                            <Run FontWeight="Bold">Room: </Run> 
+                            <Run Text="{Binding}" />
+                        </TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
