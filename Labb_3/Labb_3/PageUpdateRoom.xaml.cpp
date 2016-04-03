@@ -94,12 +94,13 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 				fileInformation += loopWall->getArea() + "\n";
 				i++;
 			}
+			FileIO::WriteTextAsync(newFile, fileInformation);
 
-			create_task(FileIO::WriteTextAsync(newFile, fileInformation)).then([this](task<void> task) {
+			/*create_task(FileIO::WriteTextAsync(newFile, fileInformation));.then([this](task<void> task) {
 				LocationHandler^ lHandle = ref new LocationHandler();
 
 				lHandle->addLocation(currentRoom);
-			});
+			});*/
 		});
 
 		roomList.push_back(currentRoom);

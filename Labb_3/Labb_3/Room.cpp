@@ -36,7 +36,7 @@ double Room::getVolume() {
 	return volume;
 }
 bool Room::isEmpty() {
-	return(RoomWalls.size() == 0);
+	return RoomWalls.empty();
 }
 
 
@@ -75,8 +75,4 @@ void Room::setLatitude(double lat) {
 
 void Room::setLongitude(double lon) {
 	longitude = lon;
-}
-
-bool Room::isEmpty() {
-	return RoomWalls.empty();
 }
