@@ -139,6 +139,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="LocationHandler.h" />
+    <ClInclude Include="MagicOptionPage.xaml.h">
+      <DependentUpon>MagicOptionPage.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="PageCreateWall.xaml.h">
       <DependentUpon>PageCreateWall.xaml</DependentUpon>
     </ClInclude>
@@ -165,6 +168,9 @@
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="MagicOptionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -201,6 +207,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="LocationHandler.cpp" />
+    <ClCompile Include="MagicOptionPage.xaml.cpp">
+      <DependentUpon>MagicOptionPage.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>

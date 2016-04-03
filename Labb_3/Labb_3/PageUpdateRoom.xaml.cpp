@@ -7,6 +7,7 @@
 #include "PageUpdateRoom.xaml.h"
 #include <string>
 #include "LocationHandler.h"
+#include "MagicOptionPage.xaml.h"
 
 using namespace Labb_3;
 
@@ -47,6 +48,7 @@ void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e) {
 		currentRoom = (Room^)e->Parameter;
 	}
 	else currentRoom = ref new Room();
+}
 }
 
 void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
@@ -114,8 +116,6 @@ void Labb_3::PageUpdateRoom::saveButton_Click(Platform::Object^ sender, Windows:
 		detailsRoomTextBox->Text = "";
 
 		currentRoom = nullptr;
-
-		//Also clear the wall list
 	}
 
 
@@ -132,4 +132,18 @@ void Labb_3::PageUpdateRoom::manualButton_Click(Platform::Object^ sender, Window
 	currentRoom->setDetailedDesc(detailsRoomTextBox->Text);
 
 	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(PageCreateWall::typeid),currentRoom);
+}
+
+
+void Labb_3::PageUpdateRoom::autoButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	if (currentRoom == nullptr) {
+		currentRoom = ref new Room();
+	}
+
+	currentRoom->setTitle(roomNameTextBox->Text);
+	currentRoom->setDetailedDesc(detailsRoomTextBox->Text);
+
+	this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(MagicOptionPage::typeid), currentRoom);
+
 }

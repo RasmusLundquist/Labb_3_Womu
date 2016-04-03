@@ -71,5 +71,6 @@
     <Page Include="PageExistingRoom.xaml" />
     <Page Include="PageListRooms.xaml" />
     <Page Include="PageCreateWall.xaml" />
+    <Page Include="MagicOptionPage.xaml" />
   </ItemGroup>
 </Project>
