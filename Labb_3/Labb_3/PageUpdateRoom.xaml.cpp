@@ -37,7 +37,7 @@ PageUpdateRoom::PageUpdateRoom()
 	if (currentRoom != nullptr) {
 
 		listBox->ItemsSource = currentRoom->getWalls();
-}
+	}
 }
 
 
@@ -47,11 +47,14 @@ void Labb_3::PageUpdateRoom::textBox_TextChanged(Platform::Object^ sender, Windo
 }
 
 void PageUpdateRoom::OnNavigatedTo(NavigationEventArgs^ e) {
-	if (currentRoom != nullptr || !currentRoom->isEmpty()) {
-		currentRoom = (Room^)e->Parameter;
+
+	if (currentRoom != nullptr) {
+		if (!currentRoom->isEmpty()) {
+			//Skriv ut väggarna
+		}
 	}
 	else currentRoom = ref new Room();
-}
+
 }
 
 
