@@ -2,6 +2,7 @@
 #include "Room.h"
 
 using namespace std;
+using namespace Platform::Collections;
 
 Room::Room()
 {
@@ -36,7 +37,7 @@ double Room::getVolume() {
 	return volume;
 }
 bool Room::isEmpty() {
-	return RoomWalls.empty();
+	return RoomWalls->Size == 0;
 }
 
 
@@ -51,14 +52,18 @@ void Room::getCoordinates() {
 
 void Room::addWall(Wall^ wall) {
 	//Kontrollera här hur många väggar det är i rummet eller i "appen?"
-	RoomWalls.insert(RoomWalls.end(), wall);
+	RoomWalls->InsertAt(RoomWalls->Size, wall);
 }
 
 Wall^ Room::getWall(int id) {
-	Wall^ some = RoomWalls.at(id);
+	Wall^ some = RoomWalls->GetAt(id);
 	return some;
 }
 
+
+Vector<Wall^>^ Room::getWalls() {
+	return RoomWalls;
+}
 
 
 double Room::getLatitude() {

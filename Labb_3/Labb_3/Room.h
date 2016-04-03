@@ -6,7 +6,7 @@ ref class Room sealed
 {
 	Platform::String^ title;
 	Platform::String^ detailedDesc;
-	std::vector<Wall^> RoomWalls;
+	Platform::Collections::Vector<Wall^>^ RoomWalls;
 	double volume;
 	double latitude;
 	double longitude;
@@ -31,5 +31,6 @@ public:
 	void addWall(Wall^ wall);
 	Wall^ getWall(int i);
 	bool isEmpty();
+	Platform::Collections::Vector<Wall^>^ getWalls();
 };
 
