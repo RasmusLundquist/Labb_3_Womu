@@ -131,9 +131,9 @@ void Labb_3::MagicOptionPage::manageCamera() {
 	}
 	if (x >= -1 && x <= 1) {
 		//detta är vänster vägg
-		this->titleTextBlock->Text = "Left wall";
-		this->descTextBlock->Text = "Suggested text: This is my beautiful left wall!";
-		this->areaTextBlock->Text = "10";
+		this->titleTextBox->Text = "Left wall";
+		this->descTextBox->Text = "Suggested text: This is my beautiful left wall!";
+		this->areaTextBox->Text = "10";
 		return;
 	}
 	//Det är svårt att testa vilka riktningar som värdena har när man inte kan rotera telefonen i emulatorn hur man vill
